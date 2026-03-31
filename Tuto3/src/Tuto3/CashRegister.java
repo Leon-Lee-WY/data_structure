@@ -41,20 +41,20 @@ class CandyMachine {
 
     public CandyMachine() {
         register=new CashRegister();
-        candy=new Dispenser(10, 1.50);
-        chips=new Dispenser(10, 2.00);
-        gum=new Dispenser(10, 0.75);
-        cookies=new Dispenser(10, 2.50);
+        candy=new Dispenser(10, 0.20);
+        chips=new Dispenser(10, 0.80);
+        gum=new Dispenser(10, 0.80);
+        cookies=new Dispenser(10, 1.50);
     }
 
     void start() {
         int choice;
         while (true) {
             System.out.println("\n--- SNACK MACHINE ---");
-            System.out.println("1. Candy ($1.50) [" + candy.getItemCount() + " left]");
-            System.out.println("2. Chips ($2.00) [" + chips.getItemCount() + " left]");
-            System.out.println("3. Gum ($0.75) [" + gum.getItemCount() + " left]");
-            System.out.println("4. Cookies ($2.50) [" + cookies.getItemCount() + " left]");
+            System.out.println("1. Candy (RM 0.20) [" + candy.getItemCount() + " left]");
+            System.out.println("2. Chips (RM0.80) [" + chips.getItemCount() + " left]");
+            System.out.println("3. Gum (RM0.80) [" + gum.getItemCount() + " left]");
+            System.out.println("4. Cookies (RM1.50) [" + cookies.getItemCount() + " left]");
             System.out.println("5. Check Machine Balance");
             System.out.println("0. Exit");
             System.out.print("Select an option: ");
