@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class CourseManager<T extends Course> {
     ArrayList<T> courses;
     CourseManager(){
-        courses=new ArrayList();
+        courses=new ArrayList<>();
     }
     public void addCourse(T course){
         courses.add(course);
@@ -17,10 +17,13 @@ public class CourseManager<T extends Course> {
         }
     }
     public T getCourseWithHighestWorkload(){
+        if (courses.isEmpty()){
+            return null;
+        } 
         T high=courses.get(0);
-        for(int i=0;i<courses.size()-1;i++){
-            if(courses.get(i).calculateTotalWorkload()>courses.get(i+1).calculateTotalWorkload()){
-                high=courses.get(i);
+        for (T x:courses) {
+            if (x.calculateTotalWorkload()>high.calculateTotalWorkload()) {
+                high=x;
             }
         }
         return high;

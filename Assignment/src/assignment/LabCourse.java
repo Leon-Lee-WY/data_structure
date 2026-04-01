@@ -30,7 +30,7 @@ public class LabCourse implements Course{
 
     @Override
     public int calculateTotalWorkload(){
-        return (int)labHoursPerWeek*numberOfSessions*14;
+        return (int)(labHoursPerWeek*numberOfSessions*14);
     }
 
     @Override
@@ -39,7 +39,7 @@ public class LabCourse implements Course{
         System.out.println("Instructor: " + instructorName);
         System.out.println("Lab Hours/Week: " + labHoursPerWeek);
         System.out.println("Number of Sessions: " + numberOfSessions);
-        System.out.println("Total Workload (Semester): " + calculateTotalWorkload() + "hours");
+        System.out.println("Total Workload (Semester): " + calculateTotalWorkload() + " hours");
         System.out.println("");
     }
 }
